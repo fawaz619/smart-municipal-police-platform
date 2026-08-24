@@ -98,7 +98,7 @@ Responsibilities include:
 
 ## 🏗️ System Architecture
 
-```text
+
                     ┌─────────────────────┐
                     │     Web Dashboard   │
                     │ Dispatcher / Admin  │
@@ -119,3 +119,30 @@ Responsibilities include:
         │ Android Officer │         │    Database     │
         │    Application  │         │   PostgreSQL    │
         └─────────────────┘         └─────────────────┘
+| Component       | Technologies                          |
+| --------------- | ------------------------------------- |
+| Mobile          | Android Studio, Java/Kotlin, XML      |
+| Web             | React, TypeScript/JavaScript          |
+| Backend         | Python, Django, Django REST Framework |
+| Database        | PostgreSQL                            |
+| Communication   | REST API, JSON                        |
+| Version Control | Git, GitHub                           |
+
+
+
+
+👨‍💻 My Contribution
+
+This project was developed as a team project.
+
+My primary contribution focused on the Android/mobile application.
+
+My responsibilities included:
+Android application development using Android Studio
+Mobile UI implementation
+Implementing application workflows
+Integrating the Android application with backend APIs
+Testing mobile functionality
+Debugging and resolving application issues
+Working with the team to integrate the mobile application with the overall system
+
