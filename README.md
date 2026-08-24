@@ -1,56 +1,121 @@
-# Municipal Police Field Operations App — POC
+# 🚓 Smart Municipal Police Field Operations Platform
 
-Proof of Concept for the Tripoli Municipality Digital Transformation Committee.
-Built by a Beirut Arab University student team, 12 weeks.
+A full-stack municipal police field operations proof-of-concept platform designed to support field officers, dispatchers, and supervisors through connected mobile, web, and backend applications.
 
-## Repository structure
+## 📌 Project Overview
 
-| Folder | Contents | Owning squad |
-|---|---|---|
-| `backend/` | Django REST Framework API | Backend |
-| `android/` | Officer mobile app (Kotlin) | Android |
-| `web/` | Dispatcher & supervisor dashboard | Web |
-| `docs/decisions/` | Written decision records | All |
-| `docs/api/` | OpenAPI specification | Backend + squad leads |
-| `docs/design/` | Mockup source files | All |
-| `docs/manuals/` | Arabic user manuals | All |
+The platform brings together three main components:
 
-## Design
+- 📱 **Android Application** — mobile application for field officers
+- 🌐 **Web Dashboard** — dispatcher and supervisor interface
+- ⚙️ **Backend API** — REST API and database services
 
-Figma mockups — [officer app](https://www.figma.com/design/eVZW8wpfWk3oxAmKCKlULw/Untitled?node-id=0-1) · [web dashboard](https://www.figma.com/design/eVZW8wpfWk3oxAmKCKlULw/Untitled?node-id=6-3043)
+The system is designed to support municipal police operations by providing connected tools for field activities, incident management, and operational coordination.
 
-Both are in Arabic (RTL) and English. Source HTML files are in `docs/design/`.
+---
 
-Follows Section 8 of the requirements: municipal blue `#1F3864`, accent `#2E5496`,
-status colours green `#2E7D32` / amber `#F9A825` / red `#C62828`.
-Cairo for Arabic, Inter for English. Minimum 48dp touch targets on mobile.
+## 🎯 Project Objectives
 
-## Working agreement
+The main objectives of the project are to:
 
-1. Never commit directly to `main`. Always branch.
-2. Branch naming: `feature/short-description` or `fix/short-description`.
-3. Pull `main` every morning before starting work.
-4. Open a pull request within 3 days of creating a branch.
-5. A squad lead reviews and merges. Authors do not merge their own work.
-6. Commit at least once per working day with a meaningful message.
-7. Never commit `.env`, API keys, credentials, or database files.
+- Provide field officers with a dedicated mobile application
+- Support dispatchers and supervisors through a web dashboard
+- Connect the mobile and web applications through REST APIs
+- Centralize operational data
+- Improve communication between field and administrative teams
+- Provide a structured foundation for future municipal police services
 
-## Daily commands
+---
 
-    git checkout main
-    git pull
-    git checkout -b feature/my-task
+## 📱 Android Application
 
-    git add .
-    git commit -m "Add mission detail screen"
-    git push -u origin feature/my-task
+The Android application is designed for municipal police officers working in the field.
 
-Then open a pull request on GitHub and tell your squad lead.
+Key areas include:
 
-## Setup
+- Officer authentication
+- Mobile field workflows
+- Incident and report management
+- Access to operational information
+- Communication with backend services
+- Mobile-friendly user interface
 
-Each folder has its own README with setup instructions for that component.
+### Android Technologies
 
-## Team
+- Android Studio
+- Java / Kotlin
+- XML
+- REST API integration
+- HTTP/JSON communication
 
-See `docs/decisions/000-team-structure.md` for squad assignments and ownership.
+---
+
+## 🌐 Web Dashboard
+
+The web application provides interfaces for dispatchers and supervisors.
+
+It is designed to support:
+
+- Dispatcher workflows
+- Supervisor workflows
+- Operational monitoring
+- Data visualization
+- Backend API integration
+- User authentication
+
+### Web Technologies
+
+- React
+- TypeScript / JavaScript
+- HTML
+- CSS
+- REST API
+
+---
+
+## ⚙️ Backend
+
+The backend provides the services required by the Android and web applications.
+
+Responsibilities include:
+
+- REST API endpoints
+- Authentication
+- Data management
+- Business logic
+- Database communication
+- Integration between mobile and web components
+
+### Backend Technologies
+
+- Django
+- Django REST Framework
+- PostgreSQL
+- REST APIs
+- Python
+
+---
+
+## 🏗️ System Architecture
+
+```text
+                    ┌─────────────────────┐
+                    │     Web Dashboard   │
+                    │ Dispatcher / Admin  │
+                    └──────────┬──────────┘
+                               │
+                               │ REST API
+                               ▼
+                    ┌─────────────────────┐
+                    │       Backend       │
+                    │ Django REST API     │
+                    └──────────┬──────────┘
+                               │
+                               │
+                 ┌─────────────┴─────────────┐
+                 │                           │
+                 ▼                           ▼
+        ┌─────────────────┐         ┌─────────────────┐
+        │ Android Officer │         │    Database     │
+        │    Application  │         │   PostgreSQL    │
+        └─────────────────┘         └─────────────────┘
